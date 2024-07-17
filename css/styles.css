@@ -1,3 +1,54 @@
-html {
+
+html{
+    width: 100vw;
+    height: 100vh;
     scroll-behavior: smooth;
 }
+
+main{
+    height: 80%;
+}
+
+header{
+    min-height: 10%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    min-height: 200px; /* Altura fija del carrusel */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+}
+
+.carousel {
+    width: 98%; /* Ancho fijo del carrusel */
+}
+
+footer{
+    min-height: 10%;
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { /* Pequeño (SM) - De 576px a 767px */
+    .carousel-inner img {
+        height: 375px; /* Altura para dispositivos pequeños */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Medio (MD) - De 768px a 991px */
+    .carousel-inner img {
+        height: 400px; /* Altura para dispositivos medianos */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { /* Grande (LG) - De 992px a 1199px */
+    .carousel-inner img {
+        height: 425px; /* Altura por defecto para dispositivos grandes */
+    }
+}
+
+@media (min-width: 1200px) { /* Extra grande (XL) - 1200px o más */
+    .carousel-inner img {
+        height: 450px; /* Altura más grande para dispositivos extra grandes */
+    }
+}
+
