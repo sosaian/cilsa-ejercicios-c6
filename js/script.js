@@ -29,6 +29,19 @@ function validateEmail(email) {
            
     return regex.test(email)
 }
+
+function validateName(name) {
+    const regex = /^[a-zA-ZÀ-ÿ\s]{2,15}$/
+    
+    /* 
+        Desglose de la Expresión Regular
+        Mínimo de 2 caracteres
+        Máximo de 15 caracteres
+        Puede contener letras, espacios y puede llevar acentos.       
+    */
+           
+    return regex.test(name)
+}
         
 function cambiarClaseSegunAncho() {
     if ($(window).width() < 768) {
@@ -52,8 +65,8 @@ function checkForm() {
 
     let ERROR = "¡UPS! Parece que los siguientes campos no tienen información válida:\n"
 
-    if (NAME.val().trim() === "" && NAME.prop('required'))
-        ERROR = ERROR.concat("\n* El campo 'Nombre' NO puede estar vacío.")
+    if (!validateName(NAME.val().trim()) && NAME.prop('required'))
+        ERROR = ERROR.concat("\n* El campo 'Nombre' debe tener entre 2 y 15 caracteres; letras, espacios y acentos.")
     
     if (!validateEmail(EMAIL.val().trim()) && EMAIL.prop('required'))
         ERROR = ERROR.concat("\n* El campo 'Correo electrónico' debe tener un email válido.")
@@ -92,7 +105,6 @@ $( document ).ready(() => {
     }
 
     const HTML = $('html')
-    const BODY = $("body")
     const DEFAULT_STYLE_BUTTON = $("#styleDefault")
     const HIGH_CONTRAST_STYLE_BUTTON = $("#styleHighContrast")
     const LEGEND = $("#formLegend")
