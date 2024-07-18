@@ -1,21 +1,21 @@
-
 html{
     width: 100vw;
     height: 100vh;
     scroll-behavior: smooth;
 }
 
-main{
-    height: 80%;
+.card{
+    max-width: 900px;
 }
 
-header{
-    min-height: 10%;
+.card .card-img{
+    min-height: 150px;
+    object-fit: cover;
 }
 
 .carousel-inner img {
     width: 100%;
-    min-height: 200px; /* Altura fija del carrusel */
+    min-height: 400px; /* Altura fija del carrusel */
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
 }
 
@@ -23,14 +23,12 @@ header{
     width: 98%; /* Ancho fijo del carrusel */
 }
 
-footer{
-    min-height: 10%;
-}
+
 
 
 @media (min-width: 576px) and (max-width: 767.98px) { /* Pequeño (SM) - De 576px a 767px */
     .carousel-inner img {
-        height: 375px; /* Altura para dispositivos pequeños */
+        height: 380px; /* Altura para dispositivos pequeños */
     }
 }
 

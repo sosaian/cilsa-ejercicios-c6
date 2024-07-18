@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,19 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="bg-light h-100 d-flex flex-column justify-content-between">
+<body class="h-100 d-flex flex-column justify-content-between">
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid d-flex justify-content-between align-items-center">
               <a class="navbar-brand" href="#">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <h3 class="navbar-toggler-icon"></h3>
+                <h3 class="navbar-toggler-icon m-0"></h3>
               </button>
               <div  id="navbarTogglerDemo02">
                 <ul class="navbar-nav mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">Inicio</a>
+                        <a class="nav-link fw-bold" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold" href="./pages/perfil.html">Perfil</a>
@@ -37,36 +37,9 @@
               </div>
             </div>
         </nav>
-          <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <h1 class="navbar-brand">Ejercicios Clase 6</h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <h3 class="navbar-toggler-icon"></h3>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
-                    <li class="nav-item me-1">
-                        <button id="styleDefault" class="nav-link fw-bold active" aria-current="page">Estilo original</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="styleHighContrast" class="nav-link fw-bold">Estilo de Alto Contraste</button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="./pages/perfil.html">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="./pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
     </header>
     
-    <main class="w-100 d-flex justify-content-center align-items-center pb-4">
+    <main class="w-100 d-flex justify-content-center align-items-center">
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner rounded-2">
               <div class="carousel-item active" data-bs-interval="2000">
@@ -90,57 +63,8 @@
           </div>
     </main>
 
-    <footer class="container-fluid p-0">
-        <nav class="h-100 navbar container-fluid navbar-expand-sm bg-body-tertiary d-flex justify-content-center align-items-center">
-            <ul class="navbar-nav mb-lg-0">
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">CILSA</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Bootcamp FullStack</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Gabriel Abalde</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Ian Sosa</h3>
-                </li>
-            </ul>
-        </nav>
-        <!-- <nav class="navbar container-fluid  h-100 p-0" data-bs-theme="dark">
-            <ul class="navbar-nav w-100 d-flex flex-row justify-content-center align-items-center gap-2">
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">CILSA</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Bootcamp FullStack</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Gabriel Abalde</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">|</h3>
-                </li>
-                <li class="nav-item">
-                    <h3 class="nav-link m-0">Ian Sosa</h3>
-                </li>
-            </ul>
-        </nav> -->
+    <footer class="p-3 bg-body-tertiary">
+        <h2 class="fs-5 text-center">CILSA | Bootcamp Fullstack | Gabriel Abalde | Ian Sosa</h2>
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

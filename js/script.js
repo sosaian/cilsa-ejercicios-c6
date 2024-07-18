@@ -31,7 +31,7 @@ function validateEmail(email) {
 }
         
 function cambiarClaseSegunAncho() {
-    if ($(window).width() < 992) {
+    if ($(window).width() < 768) {
         $('#navbarTogglerDemo02').addClass('collapse navbar-collapse ')
     } else {
         $('#navbarTogglerDemo02').removeClass('collapse navbar-collapse')
@@ -80,31 +80,24 @@ function checkForm() {
 }
 
 function cambiarModo(modo){
-    $(".prueba").attr("data-bs-theme", modo)
-    $("body").addClass("bg-"+modo)
-    // $("footer .navbar").attr("data-bs-theme", modo)
+    $("body").attr("data-bs-theme", modo);
 }
 
 $( document ).ready(() => {
 
-    // cambiarClaseSegunAncho() //se aplica si es necesario al principio
-    
-    // Escuchar el evento de cambio de tamaño de la ventana
-    // $(window).resize(cambiarClaseSegunAncho)
-
     $(window).resize(() => {
-        const NAVBAR = $('#navbarTogglerDemo02')
+        const NAVBAR = $('#navbarTogglerDemo02');
         const SHOULD_COLLAPSE = $(window).width() < 992;
         NAVBAR.toggleClass('collapse navbar-collapse', SHOULD_COLLAPSE);
     }).trigger('resize');
 
-    // const modoActual = localStorage.getItem("colorMode") || null
+    const modoActual = localStorage.getItem("colorMode") || null
 
-    // if(modoActual != null){
-    //     cambiarModo(modoActual)
-    // }else{
-    //     localStorage.setItem("colorMode", "light")
-    // }
+    if(modoActual != null){
+        cambiarModo(modoActual)
+    }else{
+        localStorage.setItem("colorMode", "light")
+    }
 
     const HTML = $('html')
     const BODY = $("body")
@@ -121,8 +114,7 @@ $( document ).ready(() => {
         LEGEND.css('color', '#212529', 'important')
         LABELS.css('color', '#212529', 'important')
 
-        // localStorage.setItem("colorMode", "light")
-        BODY.removeClass("bg-dark")
+        localStorage.setItem("colorMode", "light")
         cambiarModo("light")
     })
     
@@ -133,8 +125,7 @@ $( document ).ready(() => {
         LEGEND.css('color', '#f2f2f2', 'important')
         LABELS.css('color', '#f2f2f2', 'important')
 
-        // localStorage.setItem("colorMode", "dark")
-        BODY.removeClass("bg-light")
+        localStorage.setItem("colorMode", "dark")
         cambiarModo("dark")
     })
 
