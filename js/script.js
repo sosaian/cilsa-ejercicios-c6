@@ -41,10 +41,8 @@ function cambiarClaseSegunAncho() {
 function checkForm() {
 
     const NAME = $("#formName")
-    const SURNAME = $("#formSurname")
     const EMAIL = $("#formEmail")
-    const DATE_OF_BIRTH = $("#formDateOfBirth")
-    const COUNTRY_OF_RESIDENCE = $("#formCountryOfResidence")
+    const MESSAGE = $("#formMessage")
 
     //  Intencionalmente evito un early return para avisar al usuario de todos
     //  los errores al mismo tiempo en lugar del primero que se encuentre.
@@ -54,20 +52,14 @@ function checkForm() {
 
     let ERROR = "¡UPS! Parece que los siguientes campos no tienen información válida:\n"
 
-    if (NAME.value.trim() === "" && NAME.required)
+    if (NAME.val().trim() === "" && NAME.prop('required'))
         ERROR = ERROR.concat("\n* El campo 'Nombre' NO puede estar vacío.")
     
-    if (SURNAME.value.trim() === "" && SURNAME.required)
-        ERROR = ERROR.concat("\n* El campo 'Apellido' NO puede estar vacío.")
-    
-    if (!validateEmail(EMAIL.value.trim()) && EMAIL.required)
+    if (!validateEmail(EMAIL.val().trim()) && EMAIL.prop('required'))
         ERROR = ERROR.concat("\n* El campo 'Correo electrónico' debe tener un email válido.")
-    
-    if (DATE_OF_BIRTH.value === "" && DATE_OF_BIRTH.required)
-        ERROR = ERROR.concat("\n* El campo 'Fecha de nacimiento' NO puede estar incompleto.")
-    
-    if (COUNTRY_OF_RESIDENCE.value === "" && COUNTRY_OF_RESIDENCE.required)
-        ERROR = ERROR.concat("\n* El campo 'País de residencia' necesita algún país indicado.")
+
+    if (MESSAGE.val().trim() === "" && MESSAGE.prop('required'))
+        ERROR = ERROR.concat("\n* El campo 'Mensaje' NO puede estar vacío.")
 
     if (ERROR === "¡UPS! Parece que los siguientes campos no tienen información válida:\n")
     {
