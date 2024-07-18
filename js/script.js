@@ -106,14 +106,14 @@ $( document ).ready(() => {
 
     const HTML = $('html')
     const DEFAULT_STYLE_BUTTON = $("#styleDefault")
-    const HIGH_CONTRAST_STYLE_BUTTON = $("#styleHighContrast")
+    const DARK_MODE_STYLE_BUTTON = $("#styleDarkMode")
     const LEGEND = $("#formLegend")
     const LABELS = $('label')
     const SUBMIT_BUTTON = $("#formSubmit")
 
     DEFAULT_STYLE_BUTTON.click(() => {
         DEFAULT_STYLE_BUTTON.addClass("active")
-        HIGH_CONTRAST_STYLE_BUTTON.removeClass("active")
+        DARK_MODE_STYLE_BUTTON.removeClass("active")
         HTML.css('--bs-warning-bg-subtle', '#fff3cd', 'important')
         LEGEND.css('color', '#212529', 'important')
         LABELS.css('color', '#212529', 'important')
@@ -122,8 +122,8 @@ $( document ).ready(() => {
         cambiarModo("light")
     })
     
-    HIGH_CONTRAST_STYLE_BUTTON.click(() => {
-        HIGH_CONTRAST_STYLE_BUTTON.addClass("active")
+    DARK_MODE_STYLE_BUTTON.click(() => {
+        DARK_MODE_STYLE_BUTTON.addClass("active")
         DEFAULT_STYLE_BUTTON.removeClass("active")
         HTML.css('--bs-warning-bg-subtle', '#121212', 'important')
         LEGEND.css('color', '#f2f2f2', 'important')
